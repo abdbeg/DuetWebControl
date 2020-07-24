@@ -1,3 +1,7 @@
+### The main differences between original are:
+CSS problem fixes like not aligned icons, not fixed height for global container elements, color problems, mobile responsive problems.
+Implementing zoom and paning for temperature,layer chart
+
 # Duet Web Control
 
 Duet Web Control is a fully-responsive HTML5-based web interface for RepRapFirmware which utilizes the Bootstrap framework, JQuery and a few other libraries to allow easy control of Duet-based 3D printer electronics.
@@ -36,3 +40,6 @@ npm run serve
 ```
 npm run build
 ```
+
+### The main differences between original are:
+CSS problem fixes like not aligned icons, not fixed 

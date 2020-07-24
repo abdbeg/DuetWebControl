@@ -1,4 +1,4 @@
-### The main differences between original are:
+### The main differences compered to original are:
 CSS problem fixes like not aligned icons, not fixed height for global container elements, color problems, mobile responsive problems.
 CSS design changes, better shadows, colors and scroll design.
 Implementing zoom and paning for temperature,layer chart

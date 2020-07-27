@@ -5,7 +5,6 @@ CSS design changes, better shadows, colors and scroll design.
 
 Implementing zoom and paning for temperature, layer charts.
 
-![New web Interface](https://i.imgur.com/8TJ3tnQ.png)
 
 
 # Duet Web Control

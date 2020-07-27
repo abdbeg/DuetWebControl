@@ -46,5 +46,3 @@ npm run serve
 npm run build
 ```
 
-### The main differences between original are:
-CSS problem fixes like not aligned icons, not fixed 

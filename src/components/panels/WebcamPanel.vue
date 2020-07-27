@@ -64,7 +64,7 @@ img {
 			{{ $t('panel.webcam.caption') }}
 		</v-card-title>
 
-		<v-card-text class="pt-0 img-container">
+		<v-card-text class="pt-0 img-container webcam">
 			<v-responsive v-if="webcam.embedded" :aspect-ratio="16/9">
 				<iframe :src="webcam.url"></iframe>
 			</v-responsive>

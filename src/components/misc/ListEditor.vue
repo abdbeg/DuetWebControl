@@ -21,10 +21,10 @@
 					{{ temp }} {{ unit }}
 				</v-chip>
 			</v-col>
-			<v-col cols="6">
+			<v-col cols="6" class="listitem-values">
 				<v-row align="baseline">
 					<v-col>
-						<v-text-field v-model.number="activeValue" type="number" min="-273" max="1999" :label="$t('input.addTemperature')" @keyup.enter="addActive" hide-details></v-text-field>
+						<v-text-field v-model.number="activeValue" type="number" min="-273" max="1999" :label="$t('input.addTemperatureActive')" @keyup.enter="addActive" hide-details></v-text-field>
 					</v-col>
 					<v-col cols="auto">
 						<v-btn color="primary" :disabled="!canAddActive" @click="addActive">
@@ -33,10 +33,10 @@
 					</v-col>
 				</v-row>
 			</v-col>
-			<v-col cols="6">
+			<v-col cols="6" class="listitem-values">
 				<v-row align="baseline">
 					<v-col>
-						<v-text-field v-model.number="standbyValue" type="number" min="-273" max="1999" :label="$t('input.addTemperature')" @keyup.enter="canAddStandby && addStandby" hide-details></v-text-field>
+						<v-text-field v-model.number="standbyValue" type="number" min="-273" max="1999" :label="$t('input.addTemperatureStandby')" @keyup.enter="canAddStandby && addStandby" hide-details></v-text-field>
 					</v-col>
 					<v-col cols="auto">
 						<v-btn color="primary" :disabled="!canAddStandby" @click="addStandby">

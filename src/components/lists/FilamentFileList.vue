@@ -17,7 +17,7 @@
 			<upload-btn class="hidden-sm-and-down" target="filaments" color="primary"></upload-btn>
 		</v-toolbar>
 
-		<base-file-list ref="filelist" v-model="selection" :directory.sync="directory" :folder-icon="isRootDirectory ? 'mdi-radiobox-marked' : 'mdi-folder'" :loading.sync="loading" :doingFileOperation="doingFileOperation" sort-table="filaments" @fileClicked="fileClicked" :no-delete="isRootDirectory" :no-rename="filamentSelected" no-drag-drop :no-files-text="isRootDirectory ? 'list.filament.noFilaments' : 'list.baseFileList.noFiles'">
+		<base-file-list class="file-list" ref="filelist" v-model="selection" :directory.sync="directory" :folder-icon="isRootDirectory ? 'mdi-radiobox-marked' : 'mdi-folder'" :loading.sync="loading" :doingFileOperation="doingFileOperation" sort-table="filaments" @fileClicked="fileClicked" :no-delete="isRootDirectory" :no-rename="filamentSelected" no-drag-drop :no-files-text="isRootDirectory ? 'list.filament.noFilaments' : 'list.baseFileList.noFiles'">
 			<template #context-menu>
 				<v-list-item v-show="filamentSelected" @click="downloadFilament">
 					<v-icon class="mr-1">mdi-cloud-download</v-icon> {{ $t('list.baseFileList.downloadZIP') }}
@@ -31,7 +31,7 @@
 			</template>
 		</base-file-list>
 
-		<v-speed-dial v-model="fab" bottom right fixed direction="top" transition="scale-transition" class="hidden-md-and-up">
+		<v-speed-dial v-model="fab" bottom right fixed direction="top" transition="scale-transition" class="hidden-md-and-up" id="files-tools">
 			<template #activator>
 				<v-btn v-model="fab" dark color="primary" fab>
 					<v-icon v-if="fab">mdi-close</v-icon>

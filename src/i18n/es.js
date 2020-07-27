@@ -144,7 +144,7 @@ export default {
 	},
 	dialog: {
 		changeMoveStep: {
-			
+
 			title: 'Cambiar Numero de Pasos',
 			prompt: 'Por favor, introduce el nuevo valor para el boton:'
 		},
@@ -331,9 +331,11 @@ export default {
 			placeholder: 'Enviar Código...'
 		},
 		addTemperature: 'Nuevo valor de temperatura',
+		addTemperatureActive: 'Valor de nueva temperatura activa',
+		addTemperatureStandby: 'Valor de la nueva temperatura de espera',
 		addRPM: 'Nuevo valor predefinido'
 	},
-	
+
 	jobProgress: {
 		simulating: 'Simulando {0}, {1} completado',
 		simulated: 'Simulando {0}, 100 % completado',
@@ -610,7 +612,7 @@ export default {
 		settingsCommunication: {
 			caption: 'Comunicación',
 			pingInterval: 'Intervalo PING cuando está inactivo (ms)',
-			
+
 			ajaxRetries: 'Número máximo de reintentos AJAX',
 			updateInterval: 'Intervalo de actualización ({0})',
 			extendedUpdateEvery: 'Intervalo de actualización de estado extendido',
@@ -725,4 +727,3 @@ export default {
 		}
 	}
 }
-

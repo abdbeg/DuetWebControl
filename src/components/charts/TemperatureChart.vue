@@ -15,7 +15,7 @@
 </style>
 
 <template>
-	<v-card class="d-flex flex-column flex-grow-1">
+	<v-card class="d-flex flex-column flex-grow-1 temp-chart">
 		<v-card-title class="pt-2 pb-0">
 			<v-icon class="mr-1">mdi-chart-timeline-variant</v-icon> {{ $t('chart.temperature.caption') }}
 		</v-card-title>

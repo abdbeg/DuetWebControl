@@ -1,5 +1,5 @@
 <template>
-	<v-card>
+	<v-card class="extrusion-panel">
 		<v-card-title class="pb-0">
 			<v-icon small class="mr-1">mdi-opacity</v-icon> {{ $t('panel.extrude.caption') }}
 		</v-card-title>

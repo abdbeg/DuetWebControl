@@ -330,6 +330,8 @@ export default {
 			placeholder: 'Kodu gönder...'
 		},
 		addTemperature: 'Yeni sıcaklık değeri',
+		addTemperatureActive: 'Yeni Aktif sıcaklık değeri',
+		addTemperatureStandby: 'Yeni bekleme sıcaklığının değeri',
 		addRPM: 'Yeni hazır ayarın değeri'
 	},
 	jobProgress: {

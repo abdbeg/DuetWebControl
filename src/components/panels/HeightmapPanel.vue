@@ -36,7 +36,7 @@ h1 {
 </style>
 
 <template>
-	<v-card class="card">
+	<v-card class="card heightmap">
 		<v-card-text class="py-1">
 			<v-row>
 				<!-- TODO: Add CSV list here -->
@@ -55,7 +55,7 @@ h1 {
 				</v-col>
 
 				<v-col cols="12" md="auto" class="d-flex">
-					<div class="d-flex flex-column flex-grow-1 justify-space-between">
+					<div class="d-flex flex-column flex-grow-1">
 						<span>
 							{{ $t('panel.heightmap.numPoints', [$display(numPoints, 0)]) }}
 						</span>

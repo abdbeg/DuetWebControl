@@ -160,6 +160,12 @@ tr .v-divider {
 .v-app-bar__nav-icon {
     display: none;
 }
+.movement-panel .mdi-swap-horizontal.theme--light {
+	margin-right: 10px !important;
+}
+.temp-chart .mdi-chart-timeline-variant {
+	margin-right: 10px !important;
+}
 @media only screen and (max-width: 800px) {
 
 	.v-app-bar__nav-icon {
@@ -208,9 +214,7 @@ main#content {
 .layout.pt-2.px-2.justify-center.column {
     padding: 25px !important;
 }
-.v-menu__content.theme--dark.menuable__content__active {
-    left: 1082px !important;
-}
+
 html .v-card__title.py-2 {
     padding: 25px !important;
 }
@@ -225,9 +229,9 @@ html .v-card__title.py-2 {
     transition: 0.3s;
 }
 .v-application a:hover {
-	color: #144371;
-    text-decoration: none;
-	transition: 0.3s;
+		color: #75a9dc;
+		text-decoration: none;
+		transition: 0.3s;
 }
 header.v-sheet.v-sheet--tile.v-toolbar {
     border-radius: 10px;
@@ -318,6 +322,24 @@ canvas.chartjs-render-monitor {
     padding-left: 16px !important;
     padding-right: 16px !important;
 }
+.webcam img {
+    border-radius: 1%;
+}
+.v-card__subtitle, .v-card__text, .v-card__title {
+    padding: 25px;
+}
+.mb-2.v-card.v-sheet .v-card__title {
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+}
+.v-navigation-drawer .v-list-item  .v-ripple__container {
+    margin-left: -4% !important;
+    border-radius: 10px !important;
+}
+#settingsListItems .container.px-3 {
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+}
 @media only screen and (max-width: 766px) {
 	.mb-2.v-card.v-sheet .v-card__title .mx-0.v-btn.v-btn--contained.v-size--small {
 		margin-top: 5%;
@@ -383,7 +405,114 @@ canvas.chartjs-render-monitor {
 	h1[data-v-32b0d00f] {
     padding: 2%;
     line-height: 120%;
-}
+	}
+	.theme--light #mobile-hide-container {
+    background-color: whitesmoke !important;
+	}
+	.theme--dark #mobile-hide-container {
+    background-color: #272727 !important;
+	}
+	#mobile-hide-container {
+    border-radius: 10px !IMPORTANT;
+	}
+	#mobile-hide-container:before {
+    display: none;
+	}
+	#header {
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+	}
+	#control-all-menu .tool-input[data-v-34b8025c] {
+    max-width: 100%;
+	}
+	.heightmap  .d-flex.flex-column.mt-1 {
+    margin-top: 3% !important;
+	}
+	#files-tools .v-speed-dial__list button {
+    background-color: #ffffff !important;
+	}
+	#files-tools .v-speed-dial__list button .v-icon {
+    color: #0000004d !important;
+	}
+	#files-tools .v-speed-dial__list button .v-icon.mr-1 {
+		margin-right: -5% !important;
+	}
+	#files-tools .v-ripple__container {
+		margin-left: 0%;
+		border-radius: 100%;
+	}
+	.v-navigation-drawer .v-ripple__container {
+        border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+				margin-left: -10px;
+	}
+	.file-list th.text-start.sortable {
+    width: auto !important;
+	}
+	#settingsListItems .v-slide-group__prev {
+    display: none;
+	}
+	#settingsListItems .v-ripple__container {
+				margin-left: 0;
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+	}
+	#settingsListItems .v-tab:hover::before {
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+			margin-left: 0;
+	}
+	.listitem-values {
+    max-width: 100%;
+    flex: 0 1 100%;
+	}
+	.v-input--selection-controls {
+    margin-top: 0;
+	}
+
+
+	.mobile-home-buttons .col:first-child button {
+    border-bottom-left-radius: 0;
+	}
+
+	.mobile-home-buttons .col:nth-child(2) button {
+    border-top-right-radius: 5px;
+	}
+
+	.mobile-home-buttons .col:nth-child(3) button {
+    border-bottom-left-radius: 5px;
+	}
+
+	.mobile-home-buttons .col:nth-child(4) button {
+    border-top-right-radius: 0;
+		border-bottom-right-radius: 5px;
+	}
+
+	.mobile-home-buttons .col:nth-child(1) button {
+    border-top-left-radius: 5px;
+	}
+	.mobile-home-buttons .col {
+    display: block;
+	}
+	.mobile-home-buttons .col .row.no-gutters {
+    display: block;
+	}
+	.mobile-home-buttons .col .row.no-gutters button{
+    border-radius: 5px;
+    margin-top: 5%;
+	}
+	.mobile-home-buttons .row--dense > .col:nth-child(2) .row.no-gutters button span{
+    margin-left: -6%;
+	}
+	.mobile-home-buttons .row--dense > .col:nth-child(3) .row.no-gutters button span{
+    margin-left: 6%;
+	}
+	.movement-panel .v-card__title {
+    padding-bottom: 8px !important;
+	}
+
+
+
 }
 
 </style>
@@ -416,7 +545,7 @@ canvas.chartjs-render-monitor {
 			</v-list>
 		</v-navigation-drawer>
 
-		<v-app-bar ref="appToolbar" app clipped-left>
+		<v-app-bar ref="appToolbar" app clipped-left id="header">
 			<v-app-bar-nav-icon @click.stop="drawer = !drawer">
 				<v-icon>mdi-menu</v-icon>
 			</v-app-bar-nav-icon>
@@ -435,7 +564,7 @@ canvas.chartjs-render-monitor {
 			<upload-btn target="start" class="mr-3 hidden-sm-and-down"></upload-btn>
 			<emergency-btn class="hidden-xs-only"></emergency-btn>
 
-			<v-btn icon class="hidden-md-and-up ml-3" :class="toggleGlobalContainerColor" @click="hideGlobalContainer = !hideGlobalContainer">
+			<v-btn icon class="hidden-md-and-up ml-3" id="mobile-hide-container" :class="toggleGlobalContainerColor" @click="hideGlobalContainer = !hideGlobalContainer">
 				<v-icon>mdi-aspect-ratio</v-icon>
 			</v-btn>
 		</v-app-bar>

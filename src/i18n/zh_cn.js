@@ -332,6 +332,8 @@ export default {
 			placeholder: '发送代码...'
 		},
 		addTemperature: '新的温度值',
+		addTemperatureActive: '新的有效温度值',
+		addTemperatureStandby: '新待机温度值',
 		addRPM: '新的转速值'
 	},
 	jobProgress: {

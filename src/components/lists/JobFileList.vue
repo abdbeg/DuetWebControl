@@ -14,7 +14,7 @@
 			</v-btn>
 			<upload-btn class="hidden-sm-and-down" :directory="directory" target="gcodes" color="primary"></upload-btn>
 		</v-toolbar>
-		
+
 		<base-file-list ref="filelist" v-model="selection" :headers="headers" :directory.sync="directory" :filelist.sync="filelist" :loading.sync="loading" sort-table="jobs" @directoryLoaded="directoryLoaded" @fileClicked="fileClicked" no-files-text="list.jobs.noJobs">
 			<v-progress-linear slot="progress" :indeterminate="fileinfoProgress === -1" :value="(fileinfoProgress / filelist.length) * 100"></v-progress-linear>
 
@@ -28,7 +28,7 @@
 			</template>
 		</base-file-list>
 
-		<v-speed-dial v-model="fab" bottom right fixed direction="top" transition="scale-transition" class="hidden-md-and-up">
+		<v-speed-dial v-model="fab" bottom right fixed direction="top" transition="scale-transition" class="hidden-md-and-up" id="files-tools">
 			<template #activator>
 				<v-btn v-model="fab" dark color="primary" fab>
 					<v-icon v-if="fab">mdi-close</v-icon>

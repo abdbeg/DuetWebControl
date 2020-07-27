@@ -330,6 +330,8 @@
 			placeholder: 'Отправка кода...'
 		},
 		addTemperature: 'Новое значение температуры',
+		addTemperatureActive: 'Новое значение активной температуры',
+		addTemperatureStandby: 'Новое значение температуры для ожидания',
 		addRPM: 'Новое значение RPM'
 	},
 	jobProgress: {

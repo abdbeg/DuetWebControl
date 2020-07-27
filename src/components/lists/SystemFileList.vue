@@ -22,15 +22,15 @@
 			</v-btn>
 			<upload-btn class="hidden-sm-and-down" :directory="directory" target="system" color="primary" @uploadComplete="uploadComplete"></upload-btn>
 		</v-toolbar>
-		
-		<base-file-list ref="filelist" v-model="selection" :directory.sync="directory" :loading.sync="loading" sort-table="sys" @fileClicked="fileClicked" @fileEdited="fileEdited" no-files-text="list.system.noFiles">
+
+		<base-file-list class="file-list" ref="filelist" v-model="selection" :directory.sync="directory" :loading.sync="loading" sort-table="sys" @fileClicked="fileClicked" @fileEdited="fileEdited" no-files-text="list.system.noFiles">
 			<template #file.config.json v-if="isRootDirectory">
 				<v-icon class="mr-1">mdi-wrench</v-icon> config.json
 				<v-chip @click.stop="editConfigTemplate" class="pointer-cursor ml-2"><v-icon xs class="mr-1">mdi-open-in-new</v-icon> {{ $t('list.system.configToolNote') }}</v-chip>
 			</template>
 		</base-file-list>
-		
-		<v-speed-dial v-model="fab" bottom right fixed direction="top" transition="scale-transition" class="hidden-md-and-up">
+
+		<v-speed-dial v-model="fab" bottom right fixed direction="top" transition="scale-transition" class="hidden-md-and-up" id="files-tools">
 			<template #activator>
 				<v-btn v-model="fab" dark color="primary" fab>
 					<v-icon v-if="fab">mdi-close</v-icon>

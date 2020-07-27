@@ -330,6 +330,8 @@ export default {
 			placeholder: 'Code senden...'
 		},
 		addTemperature: 'Wert der neuen Temperatur',
+		addTemperatureActive: 'Wert der neuen Aktiven Temperatur',
+		addTemperatureStandby: 'Wert der neuen Standby Temperatur',
 		addRPM: 'Wert der neuen Vorlage'
 	},
 	jobProgress: {

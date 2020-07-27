@@ -16,8 +16,8 @@
 			</v-btn>
 			<upload-btn class="hidden-sm-and-down" :directory="directory" target="macros" color="primary"></upload-btn>
 		</v-toolbar>
-		
-		<base-file-list ref="filelist" v-model="selection" :directory.sync="directory" :loading.sync="loading" sort-table="macros" @fileClicked="fileClicked" no-files-text="list.macro.noMacros">
+
+		<base-file-list class="file-list" ref="filelist" v-model="selection" :directory.sync="directory" :loading.sync="loading" sort-table="macros" @fileClicked="fileClicked" no-files-text="list.macro.noMacros">
 			<template #context-menu>
 				<v-list-item v-show="isFile" @click="runFile(selection[0].name)">
 					<v-icon class="mr-1">mdi-play</v-icon> {{ $t('list.macro.run') }}
@@ -25,7 +25,7 @@
 			</template>
 		</base-file-list>
 
-		<v-speed-dial v-model="fab" bottom right fixed direction="top" transition="scale-transition" class="hidden-md-and-up">
+		<v-speed-dial v-model="fab" bottom right fixed direction="top" transition="scale-transition" class="hidden-md-and-up" id="files-tools">
 			<template #activator>
 				<v-btn v-model="fab" dark color="primary" fab>
 					<v-icon v-if="fab">mdi-close</v-icon>
@@ -114,4 +114,3 @@ export default {
 	}
 }
 </script>
-

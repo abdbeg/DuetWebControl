@@ -44,7 +44,7 @@ table.extra tr > td:first-child {
 					</a>
 				</template>
 
-				<v-card>
+				<v-card  id="control-all-menu">
 					<v-layout justify-center column class="pt-2 px-2">
 						<v-btn block color="primary" class="mb-3 pa-2" :disabled="!canTurnEverythingOff" @click="turnEverythingOff">
 							<v-icon class="mr-1">mdi-power-standby</v-icon> {{ $t('panel.tools.turnEverythingOff') }}

@@ -7,7 +7,7 @@
 </style>
 
 <template>
-	<v-card>
+	<v-card class="movement-panel">
 		<v-card-title>
 			<code-btn v-show="visibleAxes.length" color="primary" small code="G28" :title="$t('button.home.titleAll')" class="ml-0 hidden-sm-and-down">
 				{{ $t('button.home.captionAll') }}
@@ -42,7 +42,7 @@
 							<v-icon class="mr-1">mdi-format-vertical-align-center</v-icon> {{ $t(isDelta ? 'panel.movement.runDelta' : 'panel.movement.runBed') }}
 						</v-list-item>
 						<v-list-item :disabled="!move.compensation.type || move.compensation.type.indexOf('Point') === -1" @click="sendCode('M561')">
-							<v-icon class="mr-1">mdi-border-none</v-icon> {{ $t('panel.movement.disableBedCompensation') }} 
+							<v-icon class="mr-1">mdi-border-none</v-icon> {{ $t('panel.movement.disableBedCompensation') }}
 						</v-list-item>
 
 						<v-divider></v-divider>
@@ -64,7 +64,7 @@
 			</v-menu>
 		</v-card-title>
 
-		<v-card-text v-show="visibleAxes.length">
+		<v-card-text v-show="visibleAxes.length" class=" mobile-home-buttons">
 			<!-- Mobile home buttons -->
 			<v-row class="hidden-md-and-up py-2" no-gutters>
 				<v-col>

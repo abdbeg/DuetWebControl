@@ -259,7 +259,7 @@ export const DefaultMachineModel = new MachineModel({
 		]
 	},
 	network: {
-		name: 'Duet Web Control 2'
+		name: 'Froust Ren'
 	},
 	sensors: {
 		probes: [

@@ -22,7 +22,7 @@
 
 		<v-col class="ml-2 flex-shrink-1" cols="auto">
 			<v-btn color="info" :disabled="uiFrozen" :loading="doingCode" @click="doSend">
-				<v-icon class="mr-2">mdi-send</v-icon> {{ $t('input.code.send') }} 
+				<v-icon class="mr-2">mdi-send</v-icon> {{ $t('input.code.send') }}
 			</v-btn>
 		</v-col>
 	</v-row>

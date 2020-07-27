@@ -2,9 +2,9 @@
 
 const heaterColors = [
 	'primary',
-	'red',
-	'green',
-	'orange',
+	'primary',
+	'primary',
+	'primary',
 	'grey',
 	'lime',
 	'black',

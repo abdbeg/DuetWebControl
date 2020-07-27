@@ -21,7 +21,7 @@ th:last-child {
 }
 </style>
 
-<template>
+<template class="console-list-custom-parent">
 	<div class="component">
 		<v-data-table
 			:headers="headers" :items="events" item-key="date"
@@ -43,7 +43,7 @@ th:last-child {
 						</v-btn>
 					</template>
 
-					<v-list>
+					<v-list class="console-list-custom">
 						<v-list-item @click="clearLog">
 							<v-icon class="mr-1">mdi-notification-clear-all</v-icon> {{ $t('list.eventLog.clear') }}
 						</v-list-item>
@@ -111,7 +111,7 @@ export default {
 			get() { return this.sorting.events.column; },
 			set(value) {
 				this.setSorting({ table: 'events', column: value, descending: this.sortDesc });
-			}				
+			}
 		},
 		sortDesc: {
 			get() { return this.sorting.events.descending; },

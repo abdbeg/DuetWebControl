@@ -216,7 +216,7 @@ table.extra tr > td:first-child {
 									<!-- Heater standby -->
 									<td class="pl-1 pr-2">
 										<tool-input :bed="bedHeater" :bed-index="bedIndex" standby></tool-input>
-									</td>	
+									</td>
 								</tr>
 							</template>
 						</template>
@@ -266,7 +266,7 @@ table.extra tr > td:first-child {
 									<!-- Heater standby -->
 									<td class="pl-1 pr-2">
 										<tool-input :chamber="chamberHeater" :chamber-index="chamberIndex" standby></tool-input>
-									</td>	
+									</td>
 								</tr>
 							</template>
 						</template>
@@ -513,7 +513,7 @@ export default {
 			code += 'M702';
 			this.sendCode(code);
 		},
-		
+
 		getToolHeaters(tool) {
 			const toolHeaters = tool.heaters
 				.filter(heaterIndex => heaterIndex >= 0 && heaterIndex < this.heat.heaters.length && this.heat.heaters[heaterIndex], this)

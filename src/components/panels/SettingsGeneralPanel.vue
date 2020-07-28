@@ -1,5 +1,5 @@
 <template>
-	<v-card>
+	<v-card class="settings-general">
 		<v-card-title class="pb-0">
 			{{ $t('panel.settingsGeneral.caption') }}
 			<v-spacer></v-spacer>

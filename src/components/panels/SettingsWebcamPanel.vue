@@ -1,5 +1,5 @@
 <template>
-	<v-card>
+	<v-card class="webcam-settings">
 		<v-card-title class="pb-0">
 			{{ $t('panel.settingsWebcam.caption') }}
 		</v-card-title>

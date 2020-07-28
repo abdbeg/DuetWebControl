@@ -27,7 +27,7 @@ a:not(:hover) {
 </style>
 
 <template>
-	<v-card>
+	<v-card class="status-panel">
 		<v-card-title class="py-2">
 			<v-icon small class="mr-1">mdi-information</v-icon> {{ $t('panel.status.caption') }}
 
@@ -186,7 +186,7 @@ a:not(:hover) {
 								<div class="d-flex flex-row">
 									<template v-for="(item, index) in fanRPM">
 										<template v-if="index !== 0">
-											, 
+											,
 										</template>
 										<span :key="index" :title="item.name" class="mx-0">
 											{{ item.rpm }}

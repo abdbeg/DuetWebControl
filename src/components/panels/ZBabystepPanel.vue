@@ -1,5 +1,5 @@
 <template>
-	<v-card>
+	<v-card class="babystep">
 		<v-card-title>
 			<v-icon small class="mr-1">mdi-format-vertical-align-center</v-icon> {{ $t('panel.babystepping.caption') }}
 		</v-card-title>

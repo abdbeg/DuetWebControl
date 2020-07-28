@@ -103,11 +103,12 @@ textarea {
 
 #global-container .v-card {
     height: 100%;
-    display: table;
     width: 100%;
 }
-
- .v-card__text.px-0.pt-0.pb-2.content.text-xs-center {
+.status-panel {
+    display: table;
+}
+.v-card__text.px-0.pt-0.pb-2.content.text-xs-center {
     vertical-align: middle;
     display: table-row;
 }
@@ -157,22 +158,22 @@ tr .v-divider {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
-.v-app-bar__nav-icon {
-    display: none;
-}
 .movement-panel .mdi-swap-horizontal.theme--light {
 	margin-right: 10px !important;
 }
 .temp-chart .mdi-chart-timeline-variant {
 	margin-right: 10px !important;
 }
+#header {
+	border-top-right-radius: 0px;
+	border-top-left-radius: 0px;
+}
 @media only screen and (max-width: 800px) {
 
-	.v-app-bar__nav-icon {
+.v-app-bar__nav-icon {
 		display: block !important;
 	}
-
-	.v-list-group__header__append-icon {
+.v-list-group__header__append-icon {
 		display: block !important;
 	}
 }
@@ -208,9 +209,7 @@ main#content {
 .pt-1 .v-btn.v-btn--contained.v-size--default {
     padding: 24px;
 }
-.v-card__text.pt-0 .v-btn.v-btn--block.v-btn--contained.theme--dark.v-size--default:first-child {
-    margin-bottom: 10px;
-}
+
 .layout.pt-2.px-2.justify-center.column {
     padding: 25px !important;
 }
@@ -333,14 +332,158 @@ canvas.chartjs-render-monitor {
     padding-right: 25px !important;
 }
 .v-navigation-drawer .v-list-item  .v-ripple__container {
-    margin-left: -4% !important;
+    margin-left: -3% !important;
     border-radius: 10px !important;
 }
 #settingsListItems .container.px-3 {
     padding-left: 25px !important;
     padding-right: 25px !important;
 }
+.webcam-settings .col-md-6.col-12:first-child, .webcam-settings .col-md-6.col-12:nth-child(2) {
+    padding-top: 5px;
+}
+.webcam-settings .v-card__title {
+    padding-bottom: 0px !important;
+}
+.settings-general .col-sm-6.col-12:first-child, .settings-general .col-sm-6.col-12:nth-child(2) {
+    padding-top: 0;
+}
+.v-slide-group__prev.v-slide-group__prev--disabled {
+    transition: 1s;
+    display: none;
+}
+.v-text-field > .v-input__control > .v-input__slot:before {
+    transition: 0s;
+}
+.toolspanel .v-alert.v-sheet {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0;
+    width: 100%;
+}
+.toolspanel {
+    min-height: 316px;
+}
+#settingsListItems .v-ripple__container {
+			margin-left: 0;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+}
+#settingsListItems .v-tab:hover::before {
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+		margin-left: 0;
+}
+.movement-panel .mdi-menu-down {
+    margin-right: 0 !important;
+}
+
+/* Tablet CSS landscape*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+	.babystep .col:first-child button {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+	.babystep .col:nth-child(2) button {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+}
+
+/* Tablet CSS */
+
+@media (min-width: 766px) and (max-width: 1024px) {
+
+	table.tools {
+		width: max-content;
+	}
+	.v-card__text.pa-0 {
+		overflow-x: auto;
+	}
+	.theme--dark .v-card__text.pa-0::-webkit-scrollbar-thumb {
+	border: 4px solid;
+	border-color: #515151;
+	}
+	.theme--dark .v-card__text.pa-0::-webkit-scrollbar-track {
+	background-color: #515151;
+	border-radius: 10px;
+	}
+	.theme--dark .v-card__text.pa-0::-webkit-scrollbar-thumb:active {
+	border: 1px solid;
+	border-color: #515151;
+	}
+	.theme--light .v-card__text.pa-0::-webkit-scrollbar-thumb {
+	border: 4px solid;
+	border-color: #F5F5F5;
+	}
+	.theme--light .v-card__text.pa-0::-webkit-scrollbar-thumb:active {
+	border: 1px solid !important;
+	border-color: #F5F5F5 !important;
+	}
+	.theme--light #mobile-hide-container {
+		background-color: whitesmoke !important;
+	}
+	.theme--dark #mobile-hide-container {
+		background-color: #272727 !important;
+	}
+	#mobile-hide-container {
+		border-radius: 10px !IMPORTANT;
+	}
+	#mobile-hide-container:before {
+		display: none;
+	}
+	.movement-panel .v-card__text .row.row--dense .col:nth-child(2) .col:nth-child(2) button {
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+	}
+	.movement-panel .v-card__text .row.row--dense .col:nth-child(3) .col:nth-child(4) button {
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
+	.movement-panel .v-icon.mdi-chevron-right, .movement-panel .v-icon.mdi-chevron-left  {
+    margin-right: 0 !important;
+    margin-bottom: 0;
+	}
+	.movement-panel .row.row--dense .col:nth-child(2) .col .v-btn__content {
+		margin-left: -15%;
+	}
+	.movement-panel .row.row--dense .col:nth-child(3) .col .v-btn__content {
+		margin-left: 15%;
+	}
+	#settingsListItems .v-slide-group__prev {
+    display: none;
+	}
+	.toolspanel {
+    min-height: 333px;
+	}
+	.movement-panel .v-card__title {
+    padding-bottom: 8px !important;
+	}
+	.movement-panel .v-card__title button {
+   margin-top: 8px !important;
+	}
+
+}
+
+/* Portrait Tablet CSS */
+@media (min-width: 766px) and (max-width: 1024px) and (orientation:portrait) {
+	.babystep .col:first-child button {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+	.babystep .col:nth-child(2) button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+
+/* Mobile CSS */
 @media only screen and (max-width: 766px) {
+
 	.mb-2.v-card.v-sheet .v-card__title .mx-0.v-btn.v-btn--contained.v-size--small {
 		margin-top: 5%;
 	}
@@ -418,10 +561,6 @@ canvas.chartjs-render-monitor {
 	#mobile-hide-container:before {
     display: none;
 	}
-	#header {
-    border-top-right-radius: 0px;
-    border-top-left-radius: 0px;
-	}
 	#control-all-menu .tool-input[data-v-34b8025c] {
     max-width: 100%;
 	}
@@ -451,16 +590,6 @@ canvas.chartjs-render-monitor {
 	}
 	#settingsListItems .v-slide-group__prev {
     display: none;
-	}
-	#settingsListItems .v-ripple__container {
-				margin-left: 0;
-				border-bottom-left-radius: 0;
-				border-bottom-right-radius: 0;
-	}
-	#settingsListItems .v-tab:hover::before {
-			border-bottom-left-radius: 0;
-			border-bottom-right-radius: 0;
-			margin-left: 0;
 	}
 	.listitem-values {
     max-width: 100%;
@@ -577,11 +706,11 @@ canvas.chartjs-render-monitor {
 							<status-panel></status-panel>
 						</v-col>
 
-						<v-col cols="12" sm="6" md="5" lg="5" xl="4">
+						<v-col cols="12" sm="6" md="4" lg="5" xl="4">
 							<tools-panel></tools-panel>
 						</v-col>
 
-						<v-col v-if="$vuetify.breakpoint.mdAndUp" :class="{ 'd-flex': hasTemperaturesToDisplay }" md="3" lg="3" xl="4">
+						<v-col v-if="$vuetify.breakpoint.mdAndUp" :class="{ 'd-flex': hasTemperaturesToDisplay }" md="4" lg="3" xl="4">
 							<temperature-chart></temperature-chart>
 						</v-col>
 					</v-row>

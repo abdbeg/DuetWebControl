@@ -26,7 +26,7 @@ table.extra tr > td:first-child {
 </style>
 
 <template>
-	<v-card>
+	<v-card class="toolspanel">
 		<v-card-title class="py-2">
 			<panel-link :active="currentPage !== 'tools'" @click="currentPage = 'tools'" class="mr-2">
 				<v-icon small>mdi-wrench</v-icon> {{ $t('panel.tools.caption') }}
